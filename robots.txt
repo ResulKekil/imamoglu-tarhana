@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /sepet.html
+
+Sitemap: https://imamoglutarhana.com/sitemap.xml
