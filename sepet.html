@@ -2,123 +2,149 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Sepetim | İmamoğlu Tarhana</title>
-  <meta name="description" content="İmamoğlu Tarhana sepetiniz.">
-  <meta name="theme-color" content="#7a4607">
+  <meta name="description" content="İmamoğlu Tarhana sepetiniz. Siparişinizi WhatsApp üzerinden iletin.">
+  <meta name="theme-color" content="#14213d">
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="sepet.js" defer></script>
+  <script src="urunler.js" defer></script>
+  <script src="site.js" defer></script>
 </head>
 <body>
 <a class="atla" href="#icerik">İçeriğe geç</a>
-<div class="duyuru"><div class="kapsayici"><strong>6.000 TL ve üzeri alışverişlerde kargo ücretsiz</strong><span>Tüm illere kargo. Siparişler WhatsApp üzerinden alınır.</span></div></div>
+<div class="gorunmez" id="duyuru-alani" role="status" aria-live="polite"></div>
+<div class="duyuru"><div class="kapsayici"><strong>6.000 TL ve üzeri alışverişlerde kargo ücretsiz</strong><span>Tüm illere kargo · Siparişler WhatsApp üzerinden alınır</span></div></div>
 <header class="site-ust">
-  <div class="ana-serit">
-    <div class="kapsayici">
-      <a href="index.html" aria-label="İmamoğlu Tarhana ana sayfa"><img class="logo" src="images/logo.png" alt="İmamoğlu Tarhana" width="92" height="60"></a>
-      <nav id="ana-menu" aria-label="Ana menü">
+  <div class="kapsayici">
+    <a class="logo-link" href="index.html" aria-label="İmamoğlu Tarhana ana sayfa"><picture><source type="image/webp" srcset="images/logo.webp"><img class="logo" src="images/logo.png" alt="İmamoğlu Tarhana" width="360" height="235"></picture></a>
+    <nav id="ana-menu" aria-label="Ana menü">
         <a href="index.html#anasayfa">Anasayfa</a>
-        <a href="index.html#urunler">Ürünlerimiz</a>
+        <a href="index.html#urunler">Ürünler</a>
+        <a href="index.html#maras-tarhanasi">Maraş tarhanası</a>
         <a href="index.html#uretim">Üretim</a>
         <a href="index.html#hakkimizda">Hikâyemiz</a>
-        <a href="index.html#siparis-bilgileri">Sipariş</a>
         <a href="index.html#sss">Sık sorulanlar</a>
         <a href="index.html#iletisim">İletişim</a>
-      </nav>
-      <div class="ust-sag">
-        <a class="wa-pill" href="https://wa.me/905367849458" target="_blank" rel="noopener noreferrer"><img src="images/whatsapp.svg" alt="" width="18" height="18"><span>0536 784 94 58</span></a>
-        <a class="sepet-link" href="sepet.html" aria-label="Sepetim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="sepet-sayac" id="sepet-sayac" hidden>0</span></a>
-      </div>
-      <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="ana-menu" aria-label="Menüyü aç"><span></span></button>
+    </nav>
+    <div class="ust-sag">
+      <a class="wa-hap" href="https://wa.me/905367849458" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: 0536 784 94 58"><img src="images/whatsapp.svg" alt="" width="18" height="18"><span>0536 784 94 58</span></a>
+      <a class="sepet-link" href="sepet.html" aria-label="Sepetim"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="sepet-sayac" hidden>0</span></a>
     </div>
+    <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="ana-menu" aria-label="Menüyü aç"><span></span></button>
   </div>
 </header>
-<main id="icerik">
-  <section class="sepet-sayfa">
+<main id="icerik" class="sepet-sayfa">
+  <div class="kapsayici">
+    <p class="kirinti"><a href="index.html">Ana sayfa</a> / Sepetim</p>
     <h1>Sepetim</h1>
+    <p class="sayfa-giris">Miktarları ayarlayın, teslimat bilgilerinizi yazın ve siparişinizi WhatsApp'tan gönderin.</p>
 
-    <div id="sepet-bos" hidden>
-      <p>Sepetiniz şu an boş.</p>
-      <a class="buton" href="index.html#urunler">Ürünlere göz atın</a>
+    <div id="sepet-bos" class="sepet-bos" hidden>
+      <h2>Sepetiniz şu an boş</h2>
+      <p>Tarhana çeşitlerimize ve çerezlerimize göz atıp beğendiklerinizi sepete ekleyin.</p>
+      <a class="buton buton-ana" href="index.html#urunler">Ürünlere göz atın</a>
     </div>
 
-    <div id="sepet-dolu" hidden>
-      <ul id="sepet-liste" class="sepet-liste"></ul>
-
-      <div class="kargo-durumu" id="kargo-durumu" aria-live="polite">
-        <p id="kargo-yazi"></p>
-        <div class="ilerleme" aria-hidden="true"><span id="kargo-cubuk" style="width:0%"></span></div>
+    <div id="sepet-dolu" class="sepet-duzen" hidden>
+      <div>
+        <p id="sepet-uyari" class="sepet-uyari" role="status" hidden></p>
+        <ul id="sepet-liste" class="sepet-liste" aria-label="Sepetteki ürünler"></ul>
+        <div class="sepet-alt">
+          <a class="devam-link" href="index.html#urunler">← Alışverişe devam et</a>
+          <button id="sepeti-bosalt" class="bosalt" type="button">Sepeti boşalt</button>
+          <div id="bosalt-soru" class="bosalt-soru" hidden>
+            <span>Sepetteki tüm ürünler silinsin mi?</span>
+            <button id="bosalt-evet" class="bosalt tehlike" type="button">Evet, boşalt</button>
+            <button id="bosalt-vazgec" class="bosalt" type="button">Vazgeç</button>
+          </div>
+        </div>
       </div>
 
-      <div class="sepet-toplam">
-        <span>Ürün toplamı <small>Kargo ücreti dahil değildir</small></span>
-        <strong id="toplam-tutar">0 TL</strong>
-      </div>
+      <aside class="ozet" aria-labelledby="ozet-baslik">
+        <h2 id="ozet-baslik">Sipariş özeti</h2>
+        <div class="sepet-toplam">
+          <span>Ürün toplamı <small id="ozet-adet">0 ürün</small><small>Kargo ücreti dahil değildir</small></span>
+          <strong id="toplam-tutar">0 TL</strong>
+        </div>
+        <div class="kargo-durumu" aria-live="polite">
+          <p id="kargo-yazi"></p>
+          <div class="ilerleme" aria-hidden="true"><span id="kargo-cubuk"></span></div>
+        </div>
 
-      <div class="siparis-formu">
-        <h3>Teslimat bilgileri</h3>
-        <label>Ad Soyad
-          <input id="musteri-ad" type="text" autocomplete="name">
-        </label>
-        <label>Adres (mahalle, sokak, bina no, ilçe / il)
-          <textarea id="musteri-adres" rows="3" autocomplete="street-address"></textarea>
-        </label>
-        <label>Sipariş notu (isteğe bağlı)
-          <textarea id="musteri-not" rows="2"></textarea>
-        </label>
-      </div>
+        <div class="siparis-formu">
+          <h3>Teslimat bilgileri</h3>
+          <label for="musteri-ad">Ad Soyad
+            <input id="musteri-ad" name="ad" type="text" autocomplete="name">
+          </label>
+          <label for="musteri-adres">Adres <small>Mahalle, sokak, bina no, ilçe / il</small>
+            <textarea id="musteri-adres" name="adres" rows="3" autocomplete="street-address"></textarea>
+          </label>
+          <label for="musteri-not">Sipariş notu <small>İsteğe bağlı</small>
+            <textarea id="musteri-not" name="not" rows="2"></textarea>
+          </label>
+        </div>
 
-      <div class="onay-kutusu">
-        <label>
-          <input type="checkbox" id="kvkk-checkbox">
-          <span><a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni, <a href="mesafeli-satis-sozlesmesi.html" target="_blank" rel="noopener">Mesafeli Satış Sözleşmesi</a>'ni ve <a href="iade-kosullari.html" target="_blank" rel="noopener">İptal ve İade Koşulları</a>'nı okudum, kabul ediyorum.</span>
-        </label>
-      </div>
+        <div class="onay-kutusu">
+          <label for="kvkk-onay">
+            <input type="checkbox" id="kvkk-onay">
+            <span><a href="kvkk.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>'ni, <a href="mesafeli-satis-sozlesmesi.html" target="_blank" rel="noopener">Mesafeli Satış Sözleşmesi</a>'ni ve <a href="iade-kosullari.html" target="_blank" rel="noopener">İptal ve İade Koşulları</a>'nı okudum, kabul ediyorum.</span>
+          </label>
+        </div>
 
-      <button id="whatsapp-gonder" class="siparis-dugmesi" type="button" disabled>
-        <img src="images/whatsapp.svg" alt="" width="22" height="22">
-        WhatsApp ile sipariş ver
-      </button>
-      <p class="sepet-not">Siparişiniz WhatsApp'ta hazır bir mesaj olarak bize ulaşır. Güncel fiyat, kargo ve ödeme bilgisi orada netleştirilir; sipariş, WhatsApp'ta onaylandığında kesinleşir.</p>
-      <p class="fiyat-uyari">Sitedeki fiyatlar bilgilendirme amaçlıdır ve değişebilir. Sitede ödeme alınmaz.</p>
-
-      <button id="sepeti-bosalt" class="bosalt" type="button">Sepeti boşalt</button>
+        <button id="whatsapp-gonder" class="siparis-dugmesi" type="button" disabled>
+          <img src="images/whatsapp.svg" alt="" width="22" height="22">
+          WhatsApp ile sipariş ver
+        </button>
+        <p class="sepet-not">Siparişiniz WhatsApp'ta hazır bir mesaj olarak bize ulaşır. Güncel fiyat, kargo ve ödeme bilgisi orada netleştirilir; sipariş, WhatsApp'ta onaylandığında kesinleşir.</p>
+        <p class="fiyat-uyari">Sitedeki fiyatlar bilgilendirme amaçlıdır ve değişebilir. Sitede ödeme alınmaz.</p>
+      </aside>
     </div>
-  </section>
+  </div>
 </main>
 <footer class="site-altbilgi">
+  <div class="serit" aria-hidden="true"></div>
   <div class="kapsayici">
     <div class="altbilgi-icerik">
       <div>
         <h2>İmamoğlu Tarhana</h2>
-        <p>Kahramanmaraş'ın yöresel lezzetleri ve tarhana çeşitleri için bizimle iletişime geçin.</p>
+        <p>Kahramanmaraş'ın yöresel lezzeti tarhana, kendi işletmemizden sofranıza.</p>
         <p>Unvan: İmamoğlu Tarhana (Osman Tükel)<br>
         Adres: Yahya Kemal Mah. Rasim Özdenören Cad. Zümrüt Apt. No: 13/B, Dulkadiroğlu / Kahramanmaraş<br>
         Telefon / WhatsApp: <a href="tel:+905367849458">0536 784 94 58</a></p>
       </div>
       <div>
-        <h3>Hızlı bağlantılar</h3>
-        <p><a href="index.html#urunler">Ürünlerimiz</a></p>
-        <p><a href="index.html#uretim">Üretim</a></p>
-        <p><a href="index.html#hakkimizda">Hikâyemiz</a></p>
-        <p><a href="index.html#siparis-bilgileri">Sipariş ve kargo</a></p>
-        <p><a href="index.html#sss">Sık sorulan sorular</a></p>
-        <p><a href="index.html#iletisim">İletişim</a></p>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="index.html#urunler">Ürünlerimiz</a></li>
+          <li><a href="index.html#maras-tarhanasi">Maraş tarhanası nedir?</a></li>
+          <li><a href="index.html#uretim">Üretim</a></li>
+          <li><a href="index.html#hakkimizda">Hikâyemiz</a></li>
+          <li><a href="index.html#siparis-bilgileri">Sipariş ve kargo</a></li>
+          <li><a href="index.html#sss">Sık sorulan sorular</a></li>
+          <li><a href="sepet.html">Sepetim</a></li>
+        </ul>
       </div>
       <div>
         <h3>Yasal ve bilgilendirme</h3>
-        <p><a href="kvkk.html">KVKK Aydınlatma Metni</a></p>
-        <p><a href="mesafeli-satis-sozlesmesi.html">Mesafeli Satış Sözleşmesi</a></p>
-        <p><a href="iade-kosullari.html">İptal ve İade Koşulları</a></p>
-        <p><a href="https://www.instagram.com/imamoglu_tarhana" target="_blank" rel="noopener noreferrer">Instagram: @imamoglu_tarhana</a></p>
+        <ul>
+          <li><a href="kvkk.html">KVKK Aydınlatma Metni</a></li>
+          <li><a href="mesafeli-satis-sozlesmesi.html">Mesafeli Satış Sözleşmesi</a></li>
+          <li><a href="iade-kosullari.html">İptal ve İade Koşulları</a></li>
+        </ul>
+        <h3>Bizi takip edin</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/imamoglu_tarhana" target="_blank" rel="noopener noreferrer">Instagram: @imamoglu_tarhana</a></li>
+        </ul>
       </div>
     </div>
-    <div class="altbilgi-alt">© 2026 İmamoğlu Tarhana. Tüm hakları saklıdır.</div>
+    <div class="altbilgi-alt"><span>© <span data-yil>2026</span> İmamoğlu Tarhana. Tüm hakları saklıdır.</span><span>Sitede ödeme alınmaz, siparişler WhatsApp ile kesinleşir.</span></div>
   </div>
 </footer>
 </body>
