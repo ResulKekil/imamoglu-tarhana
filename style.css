@@ -2,7 +2,7 @@
    İmamoğlu Tarhana - v4 tasarım (beyaz ve krem)
    Fikir: Un serpilmiş tezgâh. Beyaz zemin, krem bölümler,
    logodaki buğday altını tek vurgu. Başlıklarda zarif bir serif,
-   görsellerde geleneksel kemer biçimi.
+   görseller sade, kare çerçevede.
 
    1 Renk ve yazı  2 Temel  3 Üst alan  4 Hero  5 Ürünler
    6 Bölümler  7 İletişim ve alt bilgi  8 Sepet  9 Yasal ve 404  10 Mobil
@@ -162,7 +162,7 @@ a:hover { color: var(--murekkep); }
 .hero-ic { display: grid; gap: 2.25rem; grid-template-columns: minmax(0, 1fr); align-items: center; }
 .hero-foto {
   margin: 0; position: relative; overflow: hidden; background: var(--krem-koyu);
-  aspect-ratio: 4 / 5; max-width: 100%; border-radius: 999px 999px 1.5rem 1.5rem;
+  aspect-ratio: 1; max-width: 100%; border-radius: 1.25rem;
   box-shadow: 0 0 0 .6rem var(--kart), 0 0 0 calc(.6rem + 1px) var(--cizgi);
 }
 .hero-foto picture { height: 100%; }
@@ -184,7 +184,7 @@ a:hover { color: var(--murekkep); }
 
 @media (min-width: 58rem) {
   .hero-ic { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 4.5rem; }
-  .hero-foto { grid-column: 2; grid-row: 1; aspect-ratio: 4 / 5; }
+  .hero-foto { grid-column: 2; grid-row: 1; aspect-ratio: 1; }
   .hero-panel { grid-column: 1; grid-row: 1; }
 }
 
@@ -295,7 +295,7 @@ a:hover { color: var(--murekkep); }
 .madde-liste li { display: flex; gap: .65rem; align-items: flex-start; }
 .madde-liste svg { flex: none; width: 1.25rem; height: 1.25rem; margin-top: .2rem; color: var(--bugday); }
 .kareler { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin-top: .75rem; }
-.kareler figure { margin: 0; border-radius: 999px 999px .9rem .9rem; overflow: hidden; aspect-ratio: 3 / 4; background: var(--krem-koyu); }
+.kareler figure { margin: 0; border-radius: .9rem; overflow: hidden; aspect-ratio: 1; background: var(--krem-koyu); }
 .kareler picture { height: 100%; }
 .kareler img { width: 100%; height: 100%; object-fit: cover; }
 .video-kutu { justify-self: center; width: min(100%, 19rem); }
@@ -510,7 +510,7 @@ body.bar-acik { padding-bottom: 5.5rem; }
   #ana-menu a.aktif { background: var(--krem); }
 }
 @media (max-width: 58rem) {
-  .hero-foto { aspect-ratio: 1; max-width: 26rem; width: 100%; justify-self: center; }
+  .hero-foto { aspect-ratio: 1; width: 100%; justify-self: center; }
 }
 @media (max-width: 30rem) {
   body { font-size: 1rem; }
@@ -522,7 +522,7 @@ body.bar-acik { padding-bottom: 5.5rem; }
   .adet { grid-template-columns: 2.3rem minmax(0, 1fr) 2.3rem; }
   .duyuru span { display: none; }
   .ozet { padding: 1.25rem; }
-  .hero-foto { aspect-ratio: 4 / 4.2; }
+  .hero-foto { aspect-ratio: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
